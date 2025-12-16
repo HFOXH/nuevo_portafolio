@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -10,6 +11,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-main: #41FF0D;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +21,103 @@
   }
 }
 
+@layer utilities {
+  .bg-green {
+    background-color: #41FF0D;
+  }
+
+  .text-green {
+    color: #41FF0D;
+  }
+
+  .border-green {
+    border-color: #41FF0D;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins";
+}
+
+.text-green {
+  color: #41FF0D;
+}
+
+.bg-green {
+  background-color: #41FF0D;
+}
+
+.bg-black {
+  background-color: #141414 !important;
+}
+
+.bg-black-second {
+  background-color: #202020;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.slide img {
+  width: 60%;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.slide:hover img {
+  animation: bounce 0.5s infinite alternate;
 }
