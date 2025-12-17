@@ -21,7 +21,7 @@ export default function JourneyTabs() {
             </h2>
 
             <div className="flex flex-col md:flex-row gap-6">
-                <div className="flex md:flex-col gap-4 md:w-1/4">
+                <div className="grid grid-cols-2 gap-4 md:flex md:flex-col md:w-1/4">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
@@ -225,14 +225,12 @@ function Projects() {
                     target="_blank"
                     className="group relative rounded-xl overflow-hidden bg-neutral-800 flex md:block cursor-pointer"
                 >
-                    {/* Imagen */}
                     <img
                         src={project.image}
                         alt={project.title}
                         className="w-1/3 md:w-full h-full md:h-56 object-cover"
                     />
 
-                    {/* Mobile content */}
                     <div className="p-4 md:hidden">
                         <h3 className="text-lg font-semibold text-white">
                             {project.title}
@@ -242,7 +240,6 @@ function Projects() {
                         </p>
                     </div>
 
-                    {/* Desktop overlay */}
                     <div
                         className="
                             hidden md:flex

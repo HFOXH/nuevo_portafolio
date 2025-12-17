@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 
 const testimonials = [
     {
@@ -109,17 +110,51 @@ export default function Testimonials() {
                 <div className="flex justify-between mt-10">
                     <button
                         onClick={() => paginate(-1)}
-                        className="px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 transition cursor-pointer"
+                        className="
+            group inline-flex items-center gap-2
+            px-6 py-3 rounded-full
+            border border-main text-main
+            overflow-hidden
+            transition-colors duration-300
+            hover:bg-main hover:text-black cursor-pointer
+        "
                     >
-                        ←
+                        <HiArrowLeft
+                            className="
+                text-xl opacity-0 -translate-x-2
+                transition-all duration-300
+                group-hover:opacity-100 group-hover:translate-x-0
+            "
+                        />
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            Prev
+                        </span>
                     </button>
+
                     <button
                         onClick={() => paginate(1)}
-                        className="px-4 py-2 rounded-full bg-neutral-800 hover:bg-neutral-700 transition cursor-pointer"
+                        className="
+            group inline-flex items-center gap-2
+            px-6 py-3 rounded-full
+            border border-main text-main
+            overflow-hidden
+            transition-colors duration-300
+            hover:bg-main hover:text-black cursor-pointer
+        "
                     >
-                        →
+                        <span className="transition-transform duration-300 group-hover:-translate-x-1">
+                            Next
+                        </span>
+                        <HiArrowRight
+                            className="
+                text-xl opacity-0 translate-x-2
+                transition-all duration-300
+                group-hover:opacity-100 group-hover:translate-x-0
+            "
+                        />
                     </button>
                 </div>
+
             </div>
         </section>
     );

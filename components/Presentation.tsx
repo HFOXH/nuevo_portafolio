@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Container from "@/components/Container";
 import Image from "next/image";
 
@@ -13,6 +16,8 @@ const countries = [
 ];
 
 export default function Presentation() {
+    const [mouse, setMouse] = useState({ x: 0, y: 0 });
+
     return (
         <section>
             <Container>
@@ -49,16 +54,48 @@ export default function Presentation() {
                                 {countries.map((country) => (
                                     <div
                                         key={country.code}
-                                        className="flex items-center gap-2 px-3 py-2 rounded-lg border border-white/10 bg-white/5"
+                                        onMouseMove={(e) => {
+                                            const rect = e.currentTarget.getBoundingClientRect();
+                                            setMouse({
+                                                x: e.clientX - rect.left,
+                                                y: e.clientY - rect.top,
+                                            });
+                                        }}
+                                        className="relative group
+                                            flex items-center gap-2 px-3 py-2
+                                            rounded-lg border border-white/10
+                                            bg-white/5
+                                            overflow-hidden"
                                     >
+                                        <span
+                                            className="pointer-events-none absolute inset-0
+                                                opacity-0 group-hover:opacity-100
+                                                transition-opacity duration-300"
+                                            style={{
+                                                background: `radial-gradient(
+                                                    120px circle at ${mouse.x}px ${mouse.y}px,
+                                                    rgba(43, 255, 0, 0.77),
+                                                    transparent 70%
+                                                )`,
+                                            }}
+                                        />
+
+                                        <span
+                                            className="pointer-events-none absolute inset-0
+                                                rounded-lg
+                                                opacity-0 group-hover:opacity-100
+                                                transition-opacity duration-300
+                                                ring-1 ring-main/70"
+                                        />
+
                                         <Image
                                             src={`https://flagcdn.com/${country.code}.svg`}
                                             alt={country.name}
                                             width={24}
                                             height={18}
-                                            className="object-cover"
+                                            className="relative z-10 object-cover"
                                         />
-                                        <span className="text-sm text-white">
+                                        <span className="relative z-10 text-sm text-white">
                                             {country.name}
                                         </span>
                                     </div>
