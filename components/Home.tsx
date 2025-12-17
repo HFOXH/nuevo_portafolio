@@ -19,7 +19,7 @@ const icons = [
 
 export default function Home() {
     return (
-        <section className="min-h-[calc(100vh-rem)] flex items-center my-16">
+        <section className="min-h-[calc(100vh-rem)] flex items-center py-20">
             <Container>
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
