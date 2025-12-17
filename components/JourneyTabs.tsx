@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import TimelineItem from "./TimelineItem";
+import Link from "next/link";
 
 const tabs = [
     { id: "education", label: "Education" },
@@ -181,7 +182,89 @@ function Courses() {
         </div>
     );
 }
-
 function Projects() {
-    return <p className="text-neutral-400">Proyectos destacados.</p>;
+    const projects = [
+        {
+            title: "RescuePets",
+            description: "A Mision TIC project, a web platform designed to facilitate pet adoption.",
+            image: "https://santic.netlify.app/assets/img/Rescuepets.png",
+            url: "https://rescuepets.netlify.app/"
+        },
+        {
+            title: "Graduation Project",
+            description: "This was our graduation project for systems engineering. The project included 5 different types of software, developed in less than 7 months with 8 teammates.",
+            image: "https://santic.netlify.app/assets/img/Asistencia.png",
+            url: "https://santic.netlify.app/proyectogrado"
+        },
+        {
+            title: "Cyber Virus Research",
+            description: "A research project I did with a colleague about the origin, creator, and transmission methods of viruses.",
+            image: "https://santic.netlify.app/assets/img/computador.jpg",
+            url: "#"
+        },
+        {
+            title: "Security Bikes",
+            description: "A project where I learned web development and databases (Oracle, MySQL).",
+            image: "https://santic.netlify.app/assets/img/security.png",
+            url: "#"
+        },
+        {
+            title: "C# Appointment Program",
+            description: "As a final project for the ADSI program, I developed this program.",
+            image: "https://santic.netlify.app/assets/img/citas.png",
+            url: "#"
+        },
+    ];
+
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project, index) => (
+                <Link
+                    key={index}
+                    href={project.url}
+                    target="_blank"
+                    className="group relative rounded-xl overflow-hidden bg-neutral-800 flex md:block cursor-pointer"
+                >
+                    {/* Imagen */}
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-1/3 md:w-full h-full md:h-56 object-cover"
+                    />
+
+                    {/* Mobile content */}
+                    <div className="p-4 md:hidden">
+                        <h3 className="text-lg font-semibold text-white">
+                            {project.title}
+                        </h3>
+                        <p className="text-sm text-neutral-400 mt-1">
+                            {project.description}
+                        </p>
+                    </div>
+
+                    {/* Desktop overlay */}
+                    <div
+                        className="
+                            hidden md:flex
+                            absolute inset-0
+                            bg-black/70
+                            opacity-0 group-hover:opacity-100
+                            transition-opacity duration-300
+                            items-center justify-center
+                            text-center px-6
+                        "
+                    >
+                        <div>
+                            <h3 className="text-xl font-bold text-white mb-2">
+                                {project.title}
+                            </h3>
+                            <p className="text-neutral-300 text-sm">
+                                {project.description}
+                            </p>
+                        </div>
+                    </div>
+                </Link>
+            ))}
+        </div>
+    );
 }
