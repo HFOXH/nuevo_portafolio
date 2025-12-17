@@ -3,6 +3,7 @@ import Home from "@/components/Home";
 import Presentation from "@/components/Presentation";
 import Tools from "@/components/Tools";
 import JourneyTabs from "@/components/JourneyTabs";
+import Testimonials from "@/components/Testimonials";
 
 export default function Index() {
   return (
@@ -11,7 +12,8 @@ export default function Index() {
       <MainInformation />
       <Presentation />
       <Tools />
-      <JourneyTabs></JourneyTabs>
+      <JourneyTabs />
+      <Testimonials />
     </div>
   );
 }

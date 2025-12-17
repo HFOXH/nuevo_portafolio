@@ -6,6 +6,7 @@ import { HiOutlineCloudDownload } from "react-icons/hi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { AiOutlineYoutube } from "react-icons/ai";
+import Image from "next/image";
 
 const icons = [
     { icon: LuGithub, link: "https://github.com/HFOXH" },
@@ -72,7 +73,13 @@ export default function Home() {
                     </div>
 
                     <div className="flex justify-center md:justify-end">
-                        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-gray-200" />
+                        <Image
+                            src="https://santic.netlify.app/assets/img/about.png"
+                            alt="Santiago Cárdenas"
+                            width={384}
+                            height={384}
+                            className="rounded-full object-cover"
+                        />
                     </div>
 
                 </div>
