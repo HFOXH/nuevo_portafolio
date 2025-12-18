@@ -53,25 +53,25 @@ function Education() {
         <div className="space-y-2">
             <TimelineItem
                 title="Postgraduate Degree in AI and Machine Learning"
-                subtitle="Cambrian College"
+                subtitle="Cambrian College, Sudbury, Canada"
                 date="2025 - 2026"
             />
 
             <TimelineItem
                 title="Master in cibersecurity"
-                subtitle="Isabel I University"
+                subtitle="Isabel I University, Madrid, Spain"
                 date="2023 - 2024"
             />
 
             <TimelineItem
                 title="Degree in Systems Engineering"
-                subtitle="Universitaria de Colombia University"
+                subtitle="Universitaria de Colombia University, Bogota, Colombia"
                 date="2020 - 2023"
             />
 
             <TimelineItem
                 title="Technician in Analysis and Development of Information Systems"
-                subtitle="SENA"
+                subtitle="SENA, Bogota, Colombia"
                 date="2020 - 2022"
             />
 
@@ -200,7 +200,7 @@ function Projects() {
             title: "Cyber Virus Research",
             description: "A research project I did with a colleague about the origin, creator, and transmission methods of viruses.",
             image: "https://santic.netlify.app/assets/img/computador.jpg",
-            url: "#"
+            url: "https://santic.netlify.app/virus_investigation"
         },
         {
             title: "Security Bikes",
@@ -212,7 +212,7 @@ function Projects() {
             title: "C# Appointment Program",
             description: "As a final project for the ADSI program, I developed this program.",
             image: "https://santic.netlify.app/assets/img/citas.png",
-            url: "#"
+            url: "https://www.youtube.com/watch?v=4S0SahKvL7Q&feature=youtu.be"
         },
     ];
 
