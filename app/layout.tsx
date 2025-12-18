@@ -3,8 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Santiago Cardenas | Portafolio",
-  description: "Portafolio profesional de Santiago Cárdenas",
+  title: "Santiago Cárdenas | Systems Engineer & Full-Stack Developer",
+  description:
+    "Official website of Santiago Cárdenas, Systems Engineer, Full-Stack Developer and Cybersecurity Master. Projects, experience and CV.",
 };
 
 export default function RootLayout({
