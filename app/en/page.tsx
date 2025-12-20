@@ -10,12 +10,12 @@ import Testimonials from "@/components/Testimonials";
 export default function Page() {
   return (
     <div className="bg-black">
-      <Home lang="es" />
-      <MainInformation lang="es" />
-      <Presentation lang="es" />
-      <Tools lang="es" />
-      <JourneyTabs lang="es" />
-      <Testimonials lang="es" />
+      <Home lang="en" />
+      <MainInformation lang="en" />
+      <Presentation lang="en" />
+      <Tools lang="en" />
+      <JourneyTabs lang="en" />
+      <Testimonials lang="en" />
     </div>
   );
 }

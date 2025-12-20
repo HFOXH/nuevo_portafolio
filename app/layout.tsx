@@ -1,11 +1,48 @@
+import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Santiago Cárdenas | Systems Engineer & Full-Stack Developer",
+export const metadata: Metadata = {
+  title: "Portafolio: Santiago Cardenas",
   description:
-    "Official website of Santiago Cárdenas, Systems Engineer, Full-Stack Developer and Cybersecurity Master. Projects, experience and CV.",
+    "Portafolio del ingeniero de sistemas Santiago Cardenas, experto en soluciones tecnológicas innovadoras y aplicaciones web de calidad.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  alternates: {
+    canonical: "https://santic.netlify.app",
+  },
+
+  openGraph: {
+    locale: "es_ES",
+    type: "website",
+    title: "Mi Portafolio",
+    description:
+      "Portafolio del ingeniero de sistemas Santiago Cardenas, experto en soluciones tecnológicas innovadoras y aplicaciones web de calidad.",
+    url: "https://santic.netlify.app/",
+    images: [
+      {
+        url: "https://santic.netlify.app/assets/img/sc.png",
+        width: 1200,
+        height: 630,
+        alt: "Santiago Cardenas Portfolio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Mi Portafolio",
+    description:
+      "Portafolio del ingeniero de sistemas Santiago Cardenas, experto en soluciones tecnológicas innovadoras y aplicaciones web de calidad.",
+    images: ["https://santic.netlify.app/assets/img/sc.png"],
+  },
+
+  icons: {
+    icon: "/assets/img/sc.png",
+  },
 };
 
 export default function RootLayout({
