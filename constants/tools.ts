@@ -1,4 +1,4 @@
-const url = 'https://santic.netlify.app/public/assets/img-icons/';
+const url = 'https://santic.netlify.app/assets/img-icons/';
 
 export const tools = [
   { name: "Java", icon: url + "java.png" },
