@@ -4,6 +4,7 @@ import { useState } from "react";
 import TimelineItem from "./TimelineItem";
 import Link from "next/link";
 import { journeyContent, Lang, TabKey } from "@/i18n/journey";
+import Image from "next/image";
 
 export default function JourneyTabs({ lang }: { lang: Lang }) {
     const t = journeyContent[lang];
@@ -62,10 +63,13 @@ export default function JourneyTabs({ lang }: { lang: Lang }) {
                                     target="_blank"
                                     className="group relative rounded-xl overflow-hidden bg-neutral-800"
                                 >
-                                    <img
+                                    <Image
                                         src={project.image}
                                         alt={project.title}
+                                        width={600}
+                                        height={224}
                                         className="w-full h-56 object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                     />
 
                                     <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100
