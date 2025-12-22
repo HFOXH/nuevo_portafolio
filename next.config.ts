@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "santic.netlify.app",
-        pathname: "/assets/**",
+        pathname: "/public/assets/**",
       },
     ],
   },

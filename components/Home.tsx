@@ -71,7 +71,7 @@ export default function Home({ lang }: { lang: Lang }) {
 
                     <div className="flex justify-center md:justify-end">
                         <Image
-                            src="https://santic.netlify.app/assets/img/about.png"
+                            src="https://santic.netlify.app/public/assets/img/about.png"
                             alt={t.name}
                             width={384}
                             height={384}

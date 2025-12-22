@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://santic.netlify.app/",
     images: [
       {
-        url: "https://santic.netlify.app/assets/img/sc.png",
+        url: "https://santic.netlify.app/public/assets/img/sc.png",
         width: 1200,
         height: 630,
         alt: "Santiago Cardenas Portfolio",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Mi Portafolio",
     description:
       "Portafolio del ingeniero de sistemas Santiago Cardenas, experto en soluciones tecnológicas innovadoras y aplicaciones web de calidad.",
-    images: ["https://santic.netlify.app/assets/img/sc.png"],
+    images: ["https://santic.netlify.app/public/assets/img/sc.png"],
   },
 
   icons: {
