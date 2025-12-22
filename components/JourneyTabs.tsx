@@ -1,70 +1,90 @@
 "use client";
 
 import { useState } from "react";
+import TimelineItem from "./TimelineItem";
+import Link from "next/link";
+import { journeyContent, Lang, TabKey } from "@/i18n/journey";
 
-const tabs = [
-    { id: "education", label: "Education" },
-    { id: "work", label: "Work" },
-    { id: "courses", label: "Courses" },
-    { id: "projects", label: "Projects" },
-];
-
-export default function JourneyTabs() {
-    const [activeTab, setActiveTab] = useState("education");
+export default function JourneyTabs({ lang }: { lang: Lang }) {
+    const t = journeyContent[lang];
+    const [activeTab, setActiveTab] = useState<TabKey>("education");
 
     return (
         <section className="max-w-6xl mx-auto px-4 py-16">
             <h2 className="text-4xl font-bold text-main text-center mb-12">
-                My personal Journey
+                {t.title}
             </h2>
 
             <div className="flex flex-col md:flex-row gap-6">
-                <div className="flex md:flex-col gap-4 md:w-1/4">
-                    {tabs.map((tab) => (
+                <div className="grid grid-cols-2 gap-4 md:flex md:flex-col md:w-1/4">
+                    {(Object.keys(t.tabs) as TabKey[]).map((key) => (
                         <button
-                            key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
-                            className={`rounded-xl px-6 py-4 text-left font-semibold transition-all duration-300 ease-out cursor-pointer
-                                ${activeTab === tab.id
+                            key={key}
+                            onClick={() => setActiveTab(key)}
+                            className={`rounded-xl px-6 py-4 text-left font-semibold transition-all cursor-pointer
+                ${activeTab === key
                                     ? "bg-neutral-800 text-white"
                                     : "bg-neutral-900 text-neutral-400 hover:bg-neutral-800"
                                 }`}
                         >
-                            {tab.label}
+                            {t.tabs[key]}
                         </button>
                     ))}
                 </div>
 
                 <div className="md:w-3/4 rounded-2xl bg-neutral-900 p-8 min-h-[300px]">
-                    {activeTab === "education" && <Education />}
-                    {activeTab === "work" && <Work />}
-                    {activeTab === "courses" && <Courses />}
-                    {activeTab === "projects" && <Projects />}
+                    {activeTab === "education" &&
+                        t.education.map((item, i) => (
+                            <TimelineItem key={i} {...item} />
+                        ))}
+
+                    {activeTab === "work" &&
+                        t.work.map((item, i) => (
+                            <TimelineItem key={i} {...item} />
+                        ))}
+
+                    {activeTab === "courses" && (
+                        <ul className="text-neutral-400 space-y-1">
+                            {t.courses.map((course, i) => (
+                                <li key={i}>
+                                    <span className="text-main">➔</span> {course}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+
+                    {activeTab === "projects" && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {t.projects.map((project, i) => (
+                                <Link
+                                    key={i}
+                                    href={project.url}
+                                    target="_blank"
+                                    className="group relative rounded-xl overflow-hidden bg-neutral-800"
+                                >
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-56 object-cover"
+                                    />
+
+                                    <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100
+                    transition-opacity flex items-center justify-center px-6 text-center">
+                                        <div>
+                                            <h3 className="text-xl font-bold text-white mb-2">
+                                                {project.title}
+                                            </h3>
+                                            <p className="text-neutral-300 text-sm">
+                                                {project.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
     );
-}
-
-function Education() {
-    return (
-        <div>
-            <h3 className="text-2xl font-bold mb-4">Education</h3>
-            <p className="text-neutral-400">
-                Ingeniería de Sistemas, enfoque en desarrollo web y software moderno.
-            </p>
-        </div>
-    );
-}
-
-function Work() {
-    return <p className="text-neutral-400">Experiencia laboral acá.</p>;
-}
-
-function Courses() {
-    return <p className="text-neutral-400">Cursos y certificaciones.</p>;
-}
-
-function Projects() {
-    return <p className="text-neutral-400">Proyectos destacados.</p>;
 }
