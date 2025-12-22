@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Portafolio: Santiago Cardenas",
@@ -10,11 +17,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-
   alternates: {
     canonical: "https://santic.netlify.app",
   },
-
   openGraph: {
     locale: "es_ES",
     type: "website",
@@ -31,7 +36,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Mi Portafolio",
@@ -39,7 +43,6 @@ export const metadata: Metadata = {
       "Portafolio del ingeniero de sistemas Santiago Cardenas, experto en soluciones tecnológicas innovadoras y aplicaciones web de calidad.",
     images: ["https://santic.netlify.app/assets/img/sc.png"],
   },
-
   icons: {
     icon: "/assets/img/sc.png",
   },
@@ -52,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="min-h-screen flex flex-col">
+      <body className={`${poppins.className} min-h-screen flex flex-col`}>
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

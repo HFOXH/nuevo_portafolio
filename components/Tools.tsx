@@ -16,12 +16,12 @@ export default function ToolsSlider({ lang }: { lang: Lang }) {
                     </h2>
 
                     <div className="bg-black-second pt-8 rounded-2xl">
-                        <div className="relative overflow-x-hidden overflow-y-visible h-[130px]">
+                        <div className="relative overflow-x-hidden overflow-y-visible h-32.5">
                             <div className="flex gap-10 animate-scroll">
                                 {[...tools, ...tools].map((tool, i) => (
                                     <div
                                         key={i}
-                                        className="slide flex flex-col items-center min-w-[80px] py-4"
+                                        className="slide flex flex-col items-center min-w-20 py-4"
                                     >
                                         <Image
                                             src={tool.icon}

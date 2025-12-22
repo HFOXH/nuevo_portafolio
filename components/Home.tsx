@@ -10,12 +10,12 @@ import Image from "next/image";
 import { homeContent, Lang } from "@/i18n/home";
 
 const icons = [
-    { icon: LuGithub, link: "https://github.com/HFOXH" },
-    { icon: FaLinkedinIn, link: "https://www.linkedin.com/in/santiago-cardenas-sc/" },
-    { icon: AiOutlineYoutube, link: "https://www.youtube.com/@smartcode-development" },
-    { icon: FaFacebookF, link: "https://web.facebook.com/santiago7cardenas/" },
-    { icon: FaInstagram, link: "#" },
-    { icon: FaWhatsapp, link: "https://api.whatsapp.com/send?phone=573132904901&text=Hola%20Santiago!%20Vi%20tu%20portafolio%2C%20quiero%20hacerte%20una%20oferta%20laboral%20%F0%9F%98%80" }
+    { icon: LuGithub, link: "https://github.com/HFOXH", altInfo: "GitHub de Santiago Cárdenas" },
+    { icon: FaLinkedinIn, link: "https://www.linkedin.com/in/santiago-cardenas-sc/", altInfo: "Linkedin de Santiago Cárdenas" },
+    { icon: AiOutlineYoutube, link: "https://www.youtube.com/@smartcode-development", altInfo: "Canal Youtube Smart Code" },
+    { icon: FaFacebookF, link: "https://web.facebook.com/santiago7cardenas/", altInfo: "Facebook de Santiago Cárdenas" },
+    { icon: FaInstagram, link: "#", altInfo: "Instagram de Santiago Cárdenas" },
+    { icon: FaWhatsapp, link: "https://api.whatsapp.com/send?phone=573132904901&text=Hola%20Santiago!%20Vi%20tu%20portafolio%2C%20quiero%20hacerte%20una%20oferta%20laboral%20%F0%9F%98%80", altInfo: "Whatsapp de Santiago Cárdenas" }
 ];
 
 export default function Home({ lang }: { lang: Lang }) {
@@ -36,7 +36,7 @@ export default function Home({ lang }: { lang: Lang }) {
                         </h1>
 
                         <a
-                            href="/cv.pdf"
+                            href={lang === "es" ? "https://santic.netlify.app/assets/doc/Santiago_Cardenas_Ingeniero_Sistemas.pdf.pdf" : "https://santic.netlify.app/assets/doc/CV - SantiagoCardenas.pdf"}
                             className="
                 group inline-flex items-center gap-2 mt-8 px-8 py-3
                 rounded-full border border-main text-main
@@ -56,6 +56,7 @@ export default function Home({ lang }: { lang: Lang }) {
                                 <a
                                     key={i}
                                     href={item.link}
+                                    aria-label={item.altInfo}
                                     className="
                     w-10 h-10 flex items-center justify-center
                     rounded-full border border-main text-main
@@ -77,6 +78,7 @@ export default function Home({ lang }: { lang: Lang }) {
                             height={384}
                             className="rounded-full object-cover"
                             priority
+                            fetchPriority="high"
                         />
                     </div>
 

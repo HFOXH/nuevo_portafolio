@@ -32,7 +32,7 @@ export default function JourneyTabs({ lang }: { lang: Lang }) {
                     ))}
                 </div>
 
-                <div className="md:w-3/4 rounded-2xl bg-neutral-900 p-8 min-h-[300px]">
+                <div className="md:w-3/4 rounded-2xl bg-neutral-900 p-8 min-h-75">
                     {activeTab === "education" &&
                         t.education.map((item, i) => (
                             <TimelineItem key={i} {...item} />
