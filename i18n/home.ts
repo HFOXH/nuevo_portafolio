@@ -19,6 +19,11 @@ export const homeContent = {
     name: "Santiago Cárdenas",
     download: "Télécharger le CV",
   },
+  kr: {
+    intro: "나는",
+    name: "Santiago Cárdenas",
+    download: "이력서 다운로드",
+  },
 } as const;
 
 export type Lang = keyof typeof homeContent;

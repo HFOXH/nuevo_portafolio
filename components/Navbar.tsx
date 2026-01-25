@@ -10,13 +10,14 @@ import Container from "./Container";
 const languages = [
   { code: "es", label: "ES", path: "/", flag: "es" },
   { code: "en", label: "EN", path: "/en", flag: "us" },
+  { code: "kr", label: "KR", path: "/kr", flag: "kr" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const currentLang = pathname.startsWith("/en") ? languages[1] : languages[0];
+  const currentLang = languages.find(lang => pathname.startsWith(lang.path) && lang.path !== "/") || languages[0];
 
   return (
     <motion.header

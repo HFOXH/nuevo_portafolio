@@ -13,6 +13,13 @@ export const mainInformationContent = {
       { value: "+22", label: "Technologies\nUsed" },
     ],
   },
+  kr: {
+    stats: [
+      { value: "+5", label: "년의\n경험" },
+      { value: "+37", label: "완료된\n프로젝트" },
+      { value: "+22", label: "사용한\n기술" },
+    ]
+  }
 } as const;
 
 export type Lang = keyof typeof mainInformationContent;

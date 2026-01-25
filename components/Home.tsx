@@ -28,7 +28,7 @@ export default function Home({ lang }: { lang: Lang }) {
 
                     <div>
                         <p className="text-white mb-2 text-2xl">
-                            {t.intro} <TypedText lang={lang === "es" ? "es" : "en"} />
+                            {t.intro} <TypedText lang={ lang === "es" ? "es" : lang === "kr" ? "kr" : "en" } />
                         </p>
 
                         <h1 className="text-4xl md:text-5xl font-semibold">

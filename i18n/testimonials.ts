@@ -84,6 +84,48 @@ export const testimonialsContent = {
       },
     ],
   },
+  kr: {
+    title: "사람들이 말하는 나",
+    prev: "이전",
+    next: "다음",
+    testimonials: [
+      {
+        name: "Moises Maussa",
+        role: "소프트웨어 엔지니어",
+        company: "콜롬비아 대학교",
+        message:
+          "그를 알게 된 이후로 항상 활동적이고 대화하기 좋으며 매우 친절한 사람이라는 인상을 받았습니다. 처음부터 쉽게 친해질 수 있는 타입이죠. 학습에 대한 열정, 빠른 이해력, 그리고 시스템 공학의 다양한 분야에서의 뛰어난 역량은 말할 것도 없습니다. 무엇보다도 강한 가치관을 가진 사람입니다.",
+      },
+      {
+        name: "Frank Solano",
+        role: "변호사",
+        company: "Abogados Solano",
+        message:
+          "7년 동안 학업 동료이자 친구로 지내며 그가 정직하고, 존중할 줄 알며, 책임감 있고, 생활 태도와 습관이 매우 모범적인 사람이라는 것을 확신할 수 있습니다.",
+      },
+      {
+        name: "Sergio Cogollos",
+        role: "웹 개발자 & SEO",
+        company: "콜롬비아 대학교",
+        message:
+          "맡은 일은 무엇이든 해내는 사람이며, 문제 해결 능력이 뛰어나고 결단력이 있으며 자신감도 매우 높습니다. 그가 말하듯이, 모르는 것이 있으면 아주 빠르게 배우고 결국 최고 수준에 도달합니다.",
+      },
+      {
+        name: "Kevin Gil",
+        role: "시스템 엔지니어",
+        company: "프리랜서",
+        message:
+          "업무에 매우 헌신적이고 책임감이 강하며, 압박 속에서도 잘 해내고 항상 기한을 철저히 지킵니다.",
+      },
+      {
+        name: "Ingrid Espitia",
+        role: "경영 보조",
+        company: "콜롬비아 대학교",
+        message:
+          "항상 시간 약속을 잘 지키고 맡은 일마다 최선을 다하는 모습이 인상적이었습니다. 매우 책임감 있고, 헌신적이며, 윤리적인 사람입니다. 그의 전문성과 세심함은 높은 수준의 몰입도를 보여줍니다. 약속을 지키는 사람입니다.",
+      },
+    ],
+  },
 } as const;
 
 export type Lang = keyof typeof testimonialsContent;
