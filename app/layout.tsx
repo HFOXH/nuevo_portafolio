@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     images: ["https://santic.netlify.app/assets/img/sc.png"],
   },
   icons: {
-    icon: "/assets/img/sc.png",
+    icon: "https://santic.netlify.app/assets/img/sc.png",
   },
 };
 
