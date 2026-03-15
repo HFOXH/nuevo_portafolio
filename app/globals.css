@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #ffffff;
@@ -54,6 +55,10 @@ body {
 
 .bg-black-second {
   background-color: #202020;
+}
+
+.bg-black-light {
+  background-color: #232323 !important;
 }
 
 @keyframes scroll {

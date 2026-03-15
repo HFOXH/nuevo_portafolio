@@ -99,19 +99,13 @@ export const journeyContent = {
         title: "Proyecto de Grado",
         description: "Proyecto final de ingeniería de sistemas desarrollado en equipo.",
         image: "https://santic.netlify.app/assets/img/Asistencia.png",
-        url: "https://santic.netlify.app/proyectogrado",
+        url: "/proyectogrado",
       },
       {
         title: "Investigación de Virus Informáticos",
         description: "Investigación sobre el origen y propagación de virus.",
         image: "https://santic.netlify.app/assets/img/computador.jpg",
         url: "https://santic.netlify.app/virus_investigation",
-      },
-      {
-        title: "Security Bikes",
-        description: "Proyecto de aprendizaje en desarrollo web y bases de datos.",
-        image: "https://santic.netlify.app/assets/img/security.png",
-        url: "#",
       },
       {
         title: "Programa de Citas en C#",
@@ -222,19 +216,13 @@ export const journeyContent = {
         title: "Graduation Project",
         description: "Final systems engineering project developed in a team.",
         image: "https://santic.netlify.app/assets/img/Asistencia.png",
-        url: "https://santic.netlify.app/proyectogrado",
+        url: "/proyectogrado",
       },
       {
         title: "Cyber Virus Research",
         description: "Research about the origin and propagation of computer viruses.",
         image: "https://santic.netlify.app/assets/img/computador.jpg",
         url: "https://santic.netlify.app/virus_investigation",
-      },
-      {
-        title: "Security Bikes",
-        description: "Project to learn web development and databases.",
-        image: "https://santic.netlify.app/assets/img/security.png",
-        url: "#",
       },
       {
         title: "C# Appointment Program",
@@ -344,19 +332,13 @@ export const journeyContent = {
         title: "졸업 프로젝트",
         description: "시스템 공학 팀 프로젝트.",
         image: "https://santic.netlify.app/assets/img/Asistencia.png",
-        url: "https://santic.netlify.app/proyectogrado",
+        url: "/proyectogrado",
       },
       {
         title: "컴퓨터 바이러스 연구",
         description: "컴퓨터 바이러스의 기원과 전파에 대한 연구.",
         image: "https://santic.netlify.app/assets/img/computador.jpg",
         url: "https://santic.netlify.app/virus_investigation",
-      },
-      {
-        title: "Security Bikes",
-        description: "웹 개발 및 데이터베이스 학습 프로젝트.",
-        image: "https://santic.netlify.app/assets/img/security.png",
-        url: "#",
       },
       {
         title: "C# 예약 관리 프로그램",
