@@ -36,7 +36,7 @@ export default function Home({ lang }: { lang: Lang }) {
                         </h1>
 
                         <a
-                            href={lang === "es" ? "https://santic.netlify.app/assets/doc/Santiago_Cardenas_Ingeniero_Sistemas.pdf.pdf" : "https://santic.netlify.app/assets/doc/SantiagoCardenasCV.pdf"}
+                            href={lang === "es" ? "https://santic.netlify.app/assets/doc/santiago_cardenas_cv_en.pdf" : "https://santic.netlify.app/assets/doc/santiago_cardenas_cv_en.pdf"}
                             className="
                 group inline-flex items-center gap-2 mt-8 px-8 py-3
                 rounded-full border border-main text-main
