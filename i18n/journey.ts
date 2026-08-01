@@ -90,6 +90,12 @@ export const journeyContent = {
 
     projects: [
       {
+        title: "Generador de CV",
+        description: "Un proyecto para la comunidad sobre generar tu propio CV.",
+        image: "https://santic.netlify.app/assets/img/cv_generator.png",
+        url: "https://resume-generator-sc.vercel.app/",
+      },
+      {
         title: "RescuePets",
         description: "Proyecto de Misión TIC para facilitar la adopción de mascotas.",
         image: "https://santic.netlify.app/assets/img/Rescuepets.png",
@@ -207,6 +213,12 @@ export const journeyContent = {
 
     projects: [
       {
+        title: "CV generator",
+        description: "A project for the community, you can generate your own CV.",
+        image: "https://santic.netlify.app/assets/img/cv_generator.png",
+        url: "https://resume-generator-sc.vercel.app/",
+      },
+      {
         title: "RescuePets",
         description: "A Mision TIC project designed to facilitate pet adoption.",
         image: "https://santic.netlify.app/assets/img/Rescuepets.png",
@@ -322,6 +334,12 @@ export const journeyContent = {
     ],
 
     projects: [
+      {
+        title: "이력서 생성기",
+        description: "커뮤니티를 위한 프로젝트로, 직접 이력서를 만들 수 있습니다.",
+        image: "https://santic.netlify.app/assets/img/cv_generator.png",
+        url: "https://resume-generator-sc.vercel.app/",
+      },
       {
         title: "RescuePets",
         description: "반려동물 입양을 돕기 위한 미시온 TIC 프로젝트.",
