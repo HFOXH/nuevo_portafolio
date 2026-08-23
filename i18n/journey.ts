@@ -96,6 +96,12 @@ export const journeyContent = {
         url: "https://resume-generator-sc.vercel.app/",
       },
       {
+        title: "Abogados Solano",
+        description: "Una web para la firma de abogados Solano",
+        image: "https://santic.netlify.app/assets/img/abogados_solano.png",
+        url: "https://solanoabogados.vercel.app/",
+      },
+      {
         title: "RescuePets",
         description: "Proyecto de Misión TIC para facilitar la adopción de mascotas.",
         image: "https://santic.netlify.app/assets/img/Rescuepets.png",
@@ -219,6 +225,12 @@ export const journeyContent = {
         url: "https://resume-generator-sc.vercel.app/",
       },
       {
+        title: "Solano lawyers",
+        description: "A website for the law firm Solano",
+        image: "https://santic.netlify.app/assets/img/abogados_solano.png",
+        url: "https://solanoabogados.vercel.app/",
+      },
+      {
         title: "RescuePets",
         description: "A Mision TIC project designed to facilitate pet adoption.",
         image: "https://santic.netlify.app/assets/img/Rescuepets.png",
@@ -339,6 +351,12 @@ export const journeyContent = {
         description: "커뮤니티를 위한 프로젝트로, 직접 이력서를 만들 수 있습니다.",
         image: "https://santic.netlify.app/assets/img/cv_generator.png",
         url: "https://resume-generator-sc.vercel.app/",
+      },
+      {
+        title: "Solano 법률사무소",
+        description: "Solano 법률사무소 웹사이트",
+        image: "https://santic.netlify.app/assets/img/abogados_solano.png",
+        url: "https://solanoabogados.vercel.app/",
       },
       {
         title: "RescuePets",
