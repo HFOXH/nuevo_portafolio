@@ -24,8 +24,8 @@ export default function JourneyTabs({ lang }: { lang: Lang }) {
                             onClick={() => setActiveTab(key)}
                             className={`rounded-xl px-6 py-4 text-left font-semibold transition-all cursor-pointer
                 ${activeTab === key
-                                    ? "bg-neutral-800 text-white"
-                                    : "bg-neutral-900 text-neutral-400 hover:bg-neutral-800"
+                                    ? "bg-neutral-200 dark:bg-neutral-800 text-gray-900 dark:text-white"
+                                    : "bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-800"
                                 }`}
                         >
                             {t.tabs[key]}
@@ -33,7 +33,7 @@ export default function JourneyTabs({ lang }: { lang: Lang }) {
                     ))}
                 </div>
 
-                <div className="md:w-3/4 rounded-2xl bg-neutral-900 p-8 min-h-75">
+                <div className="md:w-3/4 rounded-2xl bg-neutral-100 dark:bg-neutral-900 p-8 min-h-75">
                     {activeTab === "education" &&
                         t.education.map((item, i) => (
                             <TimelineItem key={i} {...item} />
@@ -45,7 +45,7 @@ export default function JourneyTabs({ lang }: { lang: Lang }) {
                         ))}
 
                     {activeTab === "courses" && (
-                        <ul className="text-neutral-400 space-y-1">
+                        <ul className="text-neutral-600 dark:text-neutral-400 space-y-1">
                             {t.courses.map((course, i) => (
                                 <li key={i}>
                                     <span className="text-main">➔</span> {course}
@@ -61,7 +61,7 @@ export default function JourneyTabs({ lang }: { lang: Lang }) {
                                     key={i}
                                     href={project.url}
                                     target="_blank"
-                                    className="group relative rounded-xl overflow-hidden bg-neutral-800"
+                                    className="group relative rounded-xl overflow-hidden bg-neutral-200 dark:bg-neutral-800"
                                 >
                                     <Image
                                         src={project.image}
@@ -72,13 +72,13 @@ export default function JourneyTabs({ lang }: { lang: Lang }) {
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
 
-                                    <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100
+                                    <div className="absolute inset-0 bg-white/70 dark:bg-black/70 opacity-0 group-hover:opacity-100
                     transition-opacity flex items-center justify-center px-6 text-center">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">
+                                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-neutral-300 text-sm">
+                                            <p className="text-neutral-700 dark:text-neutral-300 text-sm">
                                                 {project.description}
                                             </p>
                                         </div>

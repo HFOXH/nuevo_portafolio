@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-
+@custom-variant light (&:where(.light, .light *));
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,11 +14,17 @@
   --color-main: #41FF0D;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+:root {
 }
 
 @layer utilities {
@@ -35,6 +41,18 @@
   }
 }
 
+.dark .bg-green {
+  background-color: #41FF0D;
+}
+
+.dark .text-green {
+  color: #41FF0D;
+}
+
+.dark .border-green {
+  border-color: #41FF0D;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -49,15 +67,35 @@ body {
   background-color: #41FF0D;
 }
 
+.dark .text-green {
+  color: #41FF0D;
+}
+
+.dark .bg-green {
+  background-color: #41FF0D;
+}
+
 .bg-black {
+  background-color: #ffffff;
+}
+
+.dark .bg-black {
   background-color: #141414 !important;
 }
 
 .bg-black-second {
+  background-color: #f3f4f6;
+}
+
+.dark .bg-black-second {
   background-color: #202020;
 }
 
 .bg-black-light {
+  background-color: #f3f4f6;
+}
+
+.dark .bg-black-light {
   background-color: #232323 !important;
 }
 

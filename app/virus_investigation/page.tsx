@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 
 export default function InvestigacionVirusPage() {
@@ -18,7 +17,7 @@ export default function InvestigacionVirusPage() {
   `;
 
   return (
-    <main className="bg-black text-white dark:bg-gray-300 dark:text-white transition-colors duration-300">
+    <main className="bg-black text-gray-900 dark:text-white transition-colors duration-300">
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <motion.div
@@ -27,7 +26,7 @@ export default function InvestigacionVirusPage() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl font-bold mb-4 text-white">
+          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             Investigación Virus Cibernéticos
           </h1>
 

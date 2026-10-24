@@ -19,8 +19,8 @@ export default function TimelineItem({
       </div>
       <div>
         <h3 className="text-lg font-semibold">{title}</h3>
-        <span className="text-neutral-400 text-sm">{subtitle}</span>
-        <div className="text-neutral-400 text-xs mt-1 flex gap-2"><FaCalendarDays/>{date}</div>
+        <span className="text-neutral-600 dark:text-neutral-400 text-sm">{subtitle}</span>
+        <div className="text-neutral-600 dark:text-neutral-400 text-xs mt-1 flex gap-2"><FaCalendarDays/>{date}</div>
       </div>
     </div>
   );

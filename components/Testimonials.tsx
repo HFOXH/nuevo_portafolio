@@ -45,7 +45,7 @@ export default function Testimonials({ lang }: { lang: Lang }) {
                 {t.title}
             </h2>
 
-            <div className="relative bg-neutral-900 rounded-2xl p-10 shadow-xl overflow-hidden">
+            <div className="relative bg-neutral-100 dark:bg-neutral-900 rounded-2xl p-10 shadow-xl overflow-hidden">
                 <AnimatePresence mode="wait" custom={direction}>
                     <motion.div
                         key={current}
@@ -56,15 +56,15 @@ export default function Testimonials({ lang }: { lang: Lang }) {
                         exit="exit"
                         transition={{ duration: 0.45, ease: "easeInOut" }}
                     >
-                        <p className="text-neutral-300 text-lg text-center mb-6 leading-relaxed">
+                        <p className="text-neutral-700 dark:text-neutral-300 text-lg text-center mb-6 leading-relaxed">
                             “{testimonial.message}”
                         </p>
 
                         <div className="text-center">
-                            <p className="font-semibold text-white">
+                            <p className="font-semibold text-gray-900 dark:text-white">
                                 {testimonial.name}
                             </p>
-                            <p className="text-sm text-neutral-400">
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
                                 {testimonial.role} · {testimonial.company}
                             </p>
                         </div>

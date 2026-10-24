@@ -27,7 +27,7 @@ export default function Home({ lang }: { lang: Lang }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
                     <div>
-                        <p className="text-white mb-2 text-2xl">
+                        <p className="text-gray-900 dark:text-white mb-2 text-2xl">
                             {t.intro} <TypedText lang={ lang === "es" ? "es" : lang === "kr" ? "kr" : "en" } />
                         </p>
 

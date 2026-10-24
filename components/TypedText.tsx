@@ -26,7 +26,7 @@ export default function TypedText({ lang }: { lang: Lang }) {
     return (
         <span
             ref={el}
-            className="typed1 text-white font-medium"
+            className="typed1 text-gray-900 dark:text-white font-medium"
         />
     );
 }

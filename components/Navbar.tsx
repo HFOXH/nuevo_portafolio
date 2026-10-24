@@ -5,7 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { FiSun, FiMoon } from "react-icons/fi";
 import Container from "./Container";
+import { useTheme } from "./ThemeProvider";
 
 const languages = [
   { code: "es", label: "ES", path: "/", flag: "es" },
@@ -16,6 +18,7 @@ const languages = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { toggleTheme } = useTheme();
 
   const currentLang = languages.find(lang => pathname.startsWith(lang.path) && lang.path !== "/") || languages[0];
 
@@ -26,18 +29,37 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="
         fixed top-0 left-0 w-full z-50
-        border-b border-white/10
-        bg-black/40 backdrop-blur-xl
+        border-b border-black/10 dark:border-white/10
+        bg-white/40 dark:bg-black/40 backdrop-blur-xl
       "
     >
       <Container>
         <div className="md:hidden flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="text-lg font-bold text-white hover:text-main transition"
+            className="text-lg font-bold text-gray-900 dark:text-white hover:text-main transition"
           >
             SC
           </Link>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+              suppressHydrationWarning
+            className="
+              flex items-center justify-center
+              w-9 h-9
+              rounded-lg
+              border border-black/20 dark:border-white/20
+              text-gray-900 dark:text-white
+              hover:bg-black/10 dark:hover:bg-white/10
+              transition
+            "
+          >
+            <FiSun className="text-lg hidden dark:block" />
+              <FiMoon className="text-lg block dark:hidden" />
+          </button>
+
           <div className="relative">
             <motion.button
               whileTap={{ scale: 0.95 }}
@@ -47,9 +69,9 @@ export default function Navbar() {
                 px-3 py-1.5
                 rounded-lg
                 text-xs font-semibold
-                text-white
-                border border-white/20
-                hover:bg-white/10
+                text-gray-900 dark:text-white
+                border border-black/20 dark:border-white/20
+                hover:bg-black/10 dark:hover:bg-white/10
                 transition
               "
             >
@@ -75,8 +97,8 @@ export default function Navbar() {
                     absolute right-0 mt-2
                     w-24
                     rounded-lg
-                    bg-neutral-900/90 backdrop-blur
-                    border border-white/10
+                    bg-white/90 dark:bg-neutral-900/90 backdrop-blur
+                    border border-black/10 dark:border-white/10
                     shadow-xl
                     overflow-hidden
                   "
@@ -89,8 +111,8 @@ export default function Navbar() {
                       className="
                         flex items-center gap-2
                         px-3 py-2
-                        text-xs text-white
-                        hover:bg-neutral-800
+                        text-xs text-gray-900 dark:text-white
+                        hover:bg-neutral-200 dark:hover:bg-neutral-800
                         transition
                       "
                     >
@@ -113,12 +135,12 @@ export default function Navbar() {
         <nav className="hidden md:flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="text-xl font-bold text-white hover:text-main transition"
+            className="text-xl font-bold text-gray-900 dark:text-white hover:text-main transition"
           >
             SC
           </Link>
 
-          <div className="flex items-center gap-8 text-sm font-medium text-white">
+          <div className="flex items-center gap-8 text-sm font-medium text-gray-900 dark:text-white">
             {/*[
               { href: "/projects", label: "Proyectos" },
               { href: "/about", label: "Sobre mí" },
@@ -138,7 +160,26 @@ export default function Navbar() {
               </motion.div>
             ))*/}
 
-            <span className="h-5 w-px bg-white/20" />
+            <span className="h-5 w-px bg-black/20 dark:bg-white/20" />
+
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              suppressHydrationWarning
+              className="
+                flex items-center justify-center
+                w-9 h-9
+                rounded-lg
+                border border-black/20 dark:border-white/20
+                text-gray-900 dark:text-white
+                hover:bg-black/10 dark:hover:bg-white/10
+                transition
+              "
+            >
+              <FiSun className="text-lg hidden dark:block" />
+              <FiMoon className="text-lg block dark:hidden" />
+            </button>
 
             <div className="relative">
               <motion.button
@@ -149,9 +190,9 @@ export default function Navbar() {
                   px-3 py-1.5
                   rounded-lg
                   text-xs font-semibold
-                  text-white
-                  border border-white/20
-                  hover:bg-white/10
+                  text-gray-900 dark:text-white
+                  border border-black/20 dark:border-white/20
+                  hover:bg-black/10 dark:hover:bg-white/10
                   transition
                 "
               >
@@ -177,8 +218,8 @@ export default function Navbar() {
                       absolute right-0 mt-2
                       w-24
                       rounded-lg
-                      bg-neutral-900/90 backdrop-blur
-                      border border-white/10
+                      bg-white/90 dark:bg-neutral-900/90 backdrop-blur
+                      border border-black/10 dark:border-white/10
                       shadow-xl
                       overflow-hidden
                     "
@@ -191,8 +232,8 @@ export default function Navbar() {
                         className="
                           flex items-center gap-2
                           px-3 py-2
-                          text-xs text-white
-                          hover:bg-neutral-800
+                          text-xs text-gray-900 dark:text-white
+                          hover:bg-neutral-200 dark:hover:bg-neutral-800
                           transition
                         "
                       >

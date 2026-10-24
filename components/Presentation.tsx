@@ -42,11 +42,11 @@ export default function Presentation({ lang }: { lang: Lang }) {
                                 {t.title}
                             </h2>
 
-                            <p className="text-white text-lg leading-relaxed mb-6">
+                            <p className="text-gray-900 dark:text-white text-lg leading-relaxed mb-6">
                                 {t.description1}
                             </p>
 
-                            <p className="text-white font-medium mb-3">
+                            <p className="text-gray-900 dark:text-white font-medium mb-3">
                                 {t.experience}
                             </p>
 
@@ -63,8 +63,8 @@ export default function Presentation({ lang }: { lang: Lang }) {
                                         }}
                                         className="relative group
                       flex items-center gap-2 px-3 py-2
-                      rounded-lg border border-white/10
-                      bg-white/5
+                      rounded-lg border border-black/10 dark:border-white/10
+                      bg-black/5 dark:bg-white/5
                       overflow-hidden"
                                     >
                                         <span
@@ -96,7 +96,7 @@ export default function Presentation({ lang }: { lang: Lang }) {
                                             className="relative z-10 object-cover"
                                         />
 
-                                        <span className="relative z-10 text-sm text-white">
+                                        <span className="relative z-10 text-sm text-gray-900 dark:text-white">
                                             {country.name}
                                         </span>
                                     </div>

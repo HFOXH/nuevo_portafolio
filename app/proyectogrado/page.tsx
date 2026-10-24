@@ -55,12 +55,12 @@ export default function ProyectoPage() {
     "group inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full border border-main text-main transition-colors duration-300 hover:bg-main hover:text-black";
 
   return (
-    <main className="bg-black text-white dark:bg-gray-300 dark:text-white transition-colors duration-300">
+    <main className="bg-black text-gray-900 dark:text-white transition-colors duration-300">
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
-          <h1 className="text-4xl font-bold mb-4 text-white">Proyecto de Grado</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Proyecto de Grado</h1>
 
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-10">
             Este fue nuestro desarrollo
@@ -82,10 +82,10 @@ export default function ProyectoPage() {
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
           <div
             ref={posterRef}
-            className="max-w-4xl mx-auto bg-black-light border border-main text-white text-center px-10 py-16 rounded-xl shadow-xl transition-transform duration-200"
+            className="max-w-4xl mx-auto bg-black-light border border-main text-gray-900 dark:text-white text-center px-10 py-16 rounded-xl shadow-xl transition-transform duration-200"
           >
             <h2 className="text-2xl font-semibold">
-              "El software es un gran arte, y los programadores son los artistas."
+              &quot;El software es un gran arte, y los programadores son los artistas.&quot;
             </h2>
 
             <p className="mt-4 opacity-80">Gerald Weinberg</p>
@@ -109,7 +109,7 @@ export default function ProyectoPage() {
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
           <h2 className="text-3xl font-bold mb-3">Sistemas de Asistencia</h2>
 
-          <p className="text-neutral-400 mb-6">
+          <p className="text-neutral-600 dark:text-neutral-400 mb-6">
             Uno para empleados y otro para docentes
           </p>
 
@@ -140,7 +140,7 @@ export default function ProyectoPage() {
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
             <h2 className="text-3xl font-bold mb-3">Sistema de Invitaciones</h2>
 
-            <p className="text-neutral-400 mb-6">
+            <p className="text-neutral-600 dark:text-neutral-400 mb-6">
               Control de invitaciones de grado
             </p>
 
@@ -191,7 +191,7 @@ export default function ProyectoPage() {
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
           <h2 className="text-3xl font-bold mb-3">Aplicación móvil</h2>
 
-          <p className="text-neutral-400 mb-6">
+          <p className="text-neutral-600 dark:text-neutral-400 mb-6">
             Aplicación para estudiantes
           </p>
 
@@ -223,7 +223,7 @@ export default function ProyectoPage() {
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
             <h2 className="text-3xl font-bold mb-3">TouchScreen</h2>
 
-            <p className="text-neutral-400 mb-6">
+            <p className="text-neutral-600 dark:text-neutral-400 mb-6">
               Autoservicio para estudiantes
             </p>
 
@@ -264,7 +264,7 @@ export default function ProyectoPage() {
             El equipo de desarrollo
           </h2>
 
-          <p className="text-neutral-400 dark:text-gray-400 mb-10">
+          <p className="text-neutral-600 dark:text-neutral-400 mb-10">
             El mejor equipo de trabajo
           </p>
 
