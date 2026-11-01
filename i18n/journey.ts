@@ -38,34 +38,46 @@ export const journeyContent = {
 
     work: [
       {
+        title: "Desarrollador Web y Soporte IT",
+        subtitle: "SNOLAB, Sudbury, Canada",
+        date: "09/2026 - 12/2026",
+        logo: "https://santic.netlify.app/assets/img/snolab.png",
+      },
+      {
         title: "Desarrollador Full Stack",
         subtitle: "Symplifica, Bogotá, Colombia",
         date: "10/2023 - Presente",
+        logo: "https://santic.netlify.app/assets/img/sy.png",
       },
       {
         title: "Full Stack Developer Freelance",
         subtitle: "BotsLovers, Madrid, España",
         date: "02/2025 - 04/2025",
+        logo: "https://santic.netlify.app/assets/img/botslovers.png",
       },
       {
         title: "Analista Survey Scripter",
         subtitle: "Ipsos, Bogotá, Colombia",
         date: "10/2022 - 02/2024",
+        logo: "https://santic.netlify.app/assets/img/ipsos.png",
       },
       {
         title: "Ethical Hacker Freelance",
         subtitle: "Enterkey LLC, Miami, USA",
         date: "01/2023 - 06/2023",
+        logo: "https://santic.netlify.app/assets/img/enterkey.png",
       },
       {
         title: "Full Stack Developer & Scrum Master (Practicante)",
         subtitle: "Universitaria de Colombia, Bogotá, Colombia",
         date: "03/2022 - 03/2023",
+        logo: "https://santic.netlify.app/assets/img/uidc.jpeg",
       },
       {
         title: "Web Master",
         subtitle: "Universitaria de Colombia, Bogotá, Colombia",
         date: "12/2021 - 08/2022",
+        logo: "https://santic.netlify.app/assets/img/uidc.jpeg",
       },
     ],
 
@@ -167,34 +179,46 @@ export const journeyContent = {
 
     work: [
       {
+        title: "Web Developer and IT Support",
+        subtitle: "SNOLAB, Sudbury, Canada",
+        date: "09/2026 - 12/2026",
+        logo: "https://santic.netlify.app/assets/img/snolab.png",
+      },
+      {
         title: "Full Stack Developer",
         subtitle: "Symplifica, Bogotá, Colombia",
         date: "10/2023 - Present",
+        logo: "https://santic.netlify.app/assets/img/sy.png",
       },
       {
         title: "Freelance Full Stack Developer",
         subtitle: "BotsLovers, Madrid, Spain",
         date: "02/2025 - 04/2025",
+        logo: "https://santic.netlify.app/assets/img/botslovers.png",
       },
       {
         title: "Survey Scripter Analyst",
         subtitle: "Ipsos, Bogotá, Colombia",
         date: "10/2022 - 02/2024",
+        logo: "https://santic.netlify.app/assets/img/ipsos.png",
       },
       {
         title: "Freelance Ethical Hacker",
         subtitle: "Enterkey LLC, Miami, USA",
         date: "01/2023 - 06/2023",
+        logo: "https://santic.netlify.app/assets/img/enterkey.png",
       },
       {
         title: "Full Stack Developer & Scrum Master Intern",
         subtitle: "Universitaria de Colombia University, Bogotá, Colombia",
         date: "03/2022 - 03/2023",
+        logo: "https://santic.netlify.app/assets/img/uidc.jpeg",
       },
       {
         title: "Web Master",
         subtitle: "Universitaria de Colombia University, Bogotá, Colombia",
         date: "12/2021 - 08/2022",
+        logo: "https://santic.netlify.app/assets/img/uidc.jpeg",
       },
     ],
 
@@ -295,34 +319,46 @@ export const journeyContent = {
 
     work: [
       {
+        title: "웹 개발자 및 IT 지원",
+        subtitle: "SNOLAB, 캐나다 서드베리",
+        date: "09/2026 - 12/2026",
+        logo: "https://santic.netlify.app/assets/img/snolab.png",
+      },
+      {
         title: "풀스택 개발자",
         subtitle: "Symplifica, 보고타, 콜롬비아",
         date: "10/2023 - 현재",
+        logo: "https://santic.netlify.app/assets/img/sy.png",
       },
       {
         title: "프리랜서 풀스택 개발자",
         subtitle: "BotsLovers, 마드리드, 스페인",
         date: "02/2025 - 04/2025",
+        logo: "https://santic.netlify.app/assets/img/botslovers.png",
       },
       {
         title: "설문 스크립터 분석가",
         subtitle: "Ipsos, 보고타, 콜롬비아",
         date: "10/2022 - 02/2024",
+        logo: "https://santic.netlify.app/assets/img/ipsos.png",
       },
       {
         title: "프리랜서 윤리적 해커",
         subtitle: "Enterkey LLC, 마이애미, 미국",
         date: "01/2023 - 06/2023",
+        logo: "https://santic.netlify.app/assets/img/enterkey.png",
       },
       {
         title: "풀스택 개발자 & 스크럼 마스터 인턴",
         subtitle: "콜롬비아 대학교, 보고타, 콜롬비아",
         date: "03/2022 - 03/2023",
+        logo: "https://santic.netlify.app/assets/img/uidc.jpeg",
       },
       {
         title: "웹 마스터",
         subtitle: "콜롬비아 대학교, 보고타, 콜롬비아",
         date: "12/2021 - 08/2022",
+        logo: "https://santic.netlify.app/assets/img/uidc.jpeg",
       },
     ],
 
